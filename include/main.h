@@ -36,6 +36,26 @@
 
 #include "api.h"
 
+#include "drive.hpp"
+
+#include "lift.hpp"
+
+#include "PIDController.hpp"
+
+#include "rollers.hpp"
+
+#include "tilter.hpp"
+
+
+extern pros::Controller master;
+
+extern void wait(int time);
+
+extern void rollers(int speed);
+
+extern void brakeRollers();
+
+
 /**
  * You should add more #includes here
  */
