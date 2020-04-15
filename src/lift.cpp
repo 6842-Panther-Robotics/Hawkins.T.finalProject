@@ -27,7 +27,18 @@ void coastLift() {
 
 void moveLift(int targetPosition) {
 
+int time = 0;
+
+while (time < 25) {
+
   lift(liftPID.getSpeedToMotors(targetPosition, liftPot.get_value()));
+
+    if (liftPID.getError() < 5) {
+      time++;
+      }
+
+  }
+  lift(0);
 
 }
 

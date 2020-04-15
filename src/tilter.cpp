@@ -26,8 +26,20 @@ void coastTilter() {
 
 void score() {
 
+int time = 0;
+
+while (time < 25){
+
   tilter(tilterPID.getSpeedToMotors(3000, tilterPot.get_value()));
-}
+
+  if (tilterPID.getError() < 5) {
+    time++;
+  }
+  }
+  tilter(0);
+
+  }
+
 
 void tilterBack() {
 
